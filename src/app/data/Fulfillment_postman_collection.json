@@ -1,0 +1,417 @@
+[{
+	"info": {
+		"_postman_id": "3d5a05a1-7992-4c6b-930d-4919ff40fe70",
+		"name": "Fulfillment Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22353893",
+		"_collection_link": "https://blue-astronaut-968969.postman.co/workspace/API-Product~af2b05c1-9fa9-4d21-b349-4c423bcac03f/collection/22353893-3d5a05a1-7992-4c6b-930d-4919ff40fe70?action=share&creator=22353893&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "medicines",
+			"item": [
+				{
+					"name": "search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}",
+									"type": "text"
+								},
+								{
+									"key": "searchstring",
+									"value": "ltk",
+									"description": "Suggested Items for search: dolo, beta, mamy, zifi, Thyrox, Shilajit, Ashwagandha, Trichup",
+									"type": "text"
+								},
+								{
+									"key": "searchstring",
+									"value": "dolo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "searchstring",
+									"value": "beta",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "searchstring",
+									"value": "mamy",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "searchstring",
+									"value": "zifi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "searchstring",
+									"value": "Thyrox",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "searchstring",
+									"value": "Shilajit",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "searchstring",
+									"value": "Ashwagandha",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "searchstring",
+									"value": "Trichup",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}medicines/search",
+							"host": [
+								"{{url}}medicines"
+							],
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}",
+									"type": "text"
+								},
+								{
+									"key": "medicine_ids",
+									"value": "[\"gv0GokYn9w4zFL51eouS2g==\"]",
+									"type": "text"
+								},
+								{
+									"key": "medicine_id",
+									"value": "I446Nql4z13v8fTxtjx63g==",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}medicines/view",
+							"host": [
+								"{{url}}medicines"
+							],
+							"path": [
+								"view"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "place_order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}",
+									"type": "text"
+								},
+								{
+									"key": "items",
+									"value": "[{\"medicine_id\":\"gv0GokYn9w4zFL51eouS2g==\",\"quantity\": 4}, {\"medicine_id\":\"ZlwdulPpADMQClszLhZnKA==\",\"quantity\": 4}]",
+									"type": "text"
+								},
+								{
+									"key": "delivery_type",
+									"value": "delivery",
+									"type": "text"
+								},
+								{
+									"key": "patient_name",
+									"value": "Manav Patel",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "7458787853",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Cambridge Road, Halasuru",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Banglore",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Karnataka",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "560008",
+									"type": "text"
+								},
+								{
+									"key": "auto_assign",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "chemist_id",
+									"value": "pFSLzbwQTH8LY23N2IlczQ==",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "12.970612",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "77.6382433",
+									"type": "text"
+								},
+								{
+									"key": "patient_id",
+									"value": "63At1oDbj+GbOSWJxu1/lg==",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}orders/place_order",
+							"host": [
+								"{{url}}orders"
+							],
+							"path": [
+								"place_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}",
+									"type": "text"
+								},
+								{
+									"key": "medicine_ids",
+									"value": "[\"gv0GokYn9w4zFL51eouS2g==\", \"ZlwdulPpADMQClszLhZnKA==\"]",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "12.970612",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "77.6382433",
+									"type": "text"
+								},
+								{
+									"key": "distance",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}orders/checkout",
+							"host": [
+								"{{url}}orders"
+							],
+							"path": [
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "patients",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "8987878742",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "fulfillment API",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Tarachand",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "560008",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "blood_group",
+									"value": "B+",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}patients/add",
+							"host": [
+								"{{url}}patients"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "8987878740",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "patient_id",
+									"value": "6bf3cQe65Ma1sTvimsy7PA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}patients/view",
+							"host": [
+								"{{url}}patients"
+							],
+							"path": [
+								"view"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apikey",
+			"value": "wFIMP75eG1sQEh8vVAdXykgzF4mLhDw3",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "https://dev-api.evitalrx.in/v1/fulfillment/",
+			"type": "string"
+		}
+	]
+}]
